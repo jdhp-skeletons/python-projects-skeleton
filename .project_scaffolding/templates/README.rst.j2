@@ -1,0 +1,124 @@
+{% for c in PROJECT_NAME %}={% endfor %}
+{{ PROJECT_NAME }}
+{% for c in PROJECT_NAME %}={% endfor %}
+
+{{ COPYRIGHT_NOTICE }}
+
+* Web site: {{ PROJECT_WEB_SITE_URL }}
+* Online documentation: {{ PROJECT_ONLINE_DOCUMENTATION_URL }}
+{%- if PROJECT_ONLINE_SPHINX_GALLERY_URL %}
+* Examples: {{ PROJECT_ONLINE_SPHINX_GALLERY_URL }}
+{% endif %}
+
+{% if PROJECT_NOTEBOOKS_URL %}
+* Notebooks: {{ PROJECT_NOTEBOOKS_URL }}
+{% endif -%}
+* Source code: {{ PROJECT_SOURCE_CODE_URL }}
+* Issue tracker: {{ PROJECT_ISSUE_TRACKER_URL }}
+{% if PROJECT_PYPI_PACKAGE_NAME %}* {{ PROJECT_NAME }} on PyPI: ...{{ PROJECT_PYPI_PACKAGE_NAME }}{% endif %}
+{% if PROJECT_ANACONDA_PACKAGE_URL %}* {{ PROJECT_NAME }} on Anaconda Cloud: {{ PROJECT_ANACONDA_PACKAGE_URL }}{% endif %}
+
+Description
+===========
+
+{{ PROJECT_SHORT_DESC }}
+
+Note:
+
+    This project is still in beta stage, so the API is not finalized yet.
+
+
+Dependencies
+============
+
+C.f. requirements.txt
+
+.. _install:
+
+Installation
+============
+
+Gnu/Linux
+---------
+
+Posix (Linux, MacOSX, WSL, ...)
+-------------------------------
+
+From the TODO_PROJECT_NAME source code::
+
+    conda deactivate         # Only if you use Anaconda...
+    python3 -m venv env
+    source env/bin/activate
+    python3 -m pip install --upgrade pip
+    python3 -m pip install -r requirements.txt
+    python3 setup.py develop
+
+
+Windows
+-------
+
+From the TODO_PROJECT_NAME source code::
+
+    conda deactivate         # Only if you use Anaconda...
+    python3 -m venv env
+    env\Scripts\activate.bat
+    python3 -m pip install --upgrade pip
+    python3 -m pip install -r requirements.txt
+    python3 setup.py develop
+
+
+Documentation
+=============
+
+* Online documentation: {{ PROJECT_ONLINE_DOCUMENTATION_URL }}
+* API documentation: {{ PROJECT_ONLINE_API_DOCUMENTATION_URL }}
+
+{%- if PROJECT_ONLINE_SPHINX_GALLERY_URL %}
+Example usage
+=============
+
+* Examples: {{ PROJECT_ONLINE_SPHINX_GALLERY_URL }}
+{% endif %}
+
+
+Build and run the Python Docker image
+=====================================
+
+Build the docker image
+----------------------
+
+From the TODO_PROJECT_NAME source code::
+
+    docker build -t TODO_PYTHON_PACKAGE_NAME:latest .
+
+Run unit tests from the docker container
+----------------------------------------
+
+From the TODO_PROJECT_NAME source code::
+
+    docker run TODO_PYTHON_PACKAGE_NAME pytest
+
+Run an example from the docker container
+----------------------------------------
+
+From the TODO_PROJECT_NAME source code::
+
+    docker run TODO_PYTHON_PACKAGE_NAME python3 /app/examples/hello.py
+
+
+Bug reports
+===========
+
+To search for bugs or report them, please use the TODO_PROJECT_NAME Bug Tracker at:
+
+    TODO_PROJECT_ISSUE_TRACKER_URL
+
+
+License
+=======
+
+This project is provided under the terms and conditions of the `MIT License`_.
+
+
+.. _MIT License: http://opensource.org/licenses/MIT
+.. _command prompt: https://en.wikipedia.org/wiki/Cmd.exe
