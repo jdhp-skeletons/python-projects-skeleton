@@ -11,6 +11,7 @@ TODO_COPYRIGHT_NOTICE
 * Notebooks: TODO_PROJECT_GITHUB_URL-notebooks
 * Source code: TODO_PROJECT_GITHUB_URL
 * Issue tracker: TODO_PROJECT_ISSUE_TRACKER_URL
+* Pytest code coverage: TODO_PROJECT_ONLINE_DOCUMENTATION_URL/htmlcov/index.html
 * TODO_PROJECT_NAME on PyPI: TODO_PROJECT_PYPI_URL
 * TODO_PROJECT_NAME on Anaconda Cloud: https://anaconda.org/jdhp/TODO_PYTHON_PACKAGE_NAME
 
@@ -28,7 +29,7 @@ Note:
 Dependencies
 ============
 
-*  Python >= 3.0
+C.f. requirements.txt
 
 .. _install:
 
@@ -38,60 +39,30 @@ Installation
 Gnu/Linux
 ---------
 
-You can install, upgrade, uninstall TODO_PROJECT_NAME with these commands (in a
-terminal)::
+Posix (Linux, MacOSX, WSL, ...)
+-------------------------------
 
-    pip install --pre TODO_PYTHON_PACKAGE_NAME
-    pip install --upgrade TODO_PYTHON_PACKAGE_NAME
-    pip uninstall TODO_PYTHON_PACKAGE_NAME
+From the TODO_PROJECT_NAME source code::
 
-Or, if you have downloaded the TODO_PROJECT_NAME source code::
+    conda deactivate         # Only if you use Anaconda...
+    python3 -m venv env
+    source env/bin/activate
+    python3 -m pip install --upgrade pip
+    python3 -m pip install -r requirements.txt
+    python3 setup.py develop
 
-    python3 setup.py install
-
-.. There's also a package for Debian/Ubuntu::
-.. 
-..     sudo apt-get install TODO_PYTHON_PACKAGE_NAME
 
 Windows
 -------
 
-.. Note:
-.. 
-..     The following installation procedure has been tested to work with Python
-..     3.4 under Windows 7.
-..     It should also work with recent Windows systems.
+From the TODO_PROJECT_NAME source code::
 
-You can install, upgrade, uninstall TODO_PROJECT_NAME with these commands (in a
-`command prompt`_)::
-
-    py -m pip install --pre TODO_PYTHON_PACKAGE_NAME
-    py -m pip install --upgrade TODO_PYTHON_PACKAGE_NAME
-    py -m pip uninstall TODO_PYTHON_PACKAGE_NAME
-
-Or, if you have downloaded the TODO_PROJECT_NAME source code::
-
-    py setup.py install
-
-MacOSX
--------
-
-.. Note:
-.. 
-..     The following installation procedure has been tested to work with Python
-..     3.5 under MacOSX 10.9 (*Mavericks*).
-..     It should also work with recent MacOSX systems.
-
-You can install, upgrade, uninstall TODO_PROJECT_NAME with these commands (in a
-terminal)::
-
-    pip install --pre TODO_PYTHON_PACKAGE_NAME
-    pip install --upgrade TODO_PYTHON_PACKAGE_NAME
-    pip uninstall TODO_PYTHON_PACKAGE_NAME
-
-Or, if you have downloaded the TODO_PROJECT_NAME source code::
-
-    python3 setup.py install
+    conda deactivate         # Only if you use Anaconda...
+    python3 -m venv env
+    env\Scripts\activate.bat
+    python3 -m pip install --upgrade pip
+    python3 -m pip install -r requirements.txt
+    python3 setup.py develop
 
 
 Documentation
@@ -104,7 +75,32 @@ Documentation
 Example usage
 =============
 
-TODO
+* Examples: TODO_PROJECT_ONLINE_DOCUMENTATION_URL/gallery/
+
+
+Build and run the Python Docker image
+=====================================
+
+Build the docker image
+----------------------
+
+From the TODO_PROJECT_NAME source code::
+
+    docker build -t TODO_PYTHON_PACKAGE_NAME:latest .
+
+Run unit tests from the docker container
+----------------------------------------
+
+From the TODO_PROJECT_NAME source code::
+
+    docker run TODO_PYTHON_PACKAGE_NAME pytest
+
+Run an example from the docker container
+----------------------------------------
+
+From the TODO_PROJECT_NAME source code::
+
+    docker run TODO_PYTHON_PACKAGE_NAME python3 /app/examples/hello.py
 
 
 Bug reports
