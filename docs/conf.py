@@ -16,6 +16,7 @@
 import sys
 import os
 import sphinx_rtd_theme
+from sphinx_gallery.sorting import FileNameSortKey, ExampleTitleSortKey
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -366,5 +367,6 @@ sphinx_gallery_conf = {
     'examples_dirs': '../examples',
     # path where to save gallery generated examples
     'gallery_dirs': 'gallery',
-    'backreferences_dir': False,
+    'backreferences_dir': None,
+    'within_subsection_order': FileNameSortKey,  # https://sphinx-gallery.github.io/stable/configuration.html#sorting-gallery-examples
 }
