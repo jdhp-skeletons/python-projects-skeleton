@@ -36,9 +36,6 @@ C.f. requirements.txt
 Installation
 ============
 
-Gnu/Linux
----------
-
 Posix (Linux, MacOSX, WSL, ...)
 -------------------------------
 
