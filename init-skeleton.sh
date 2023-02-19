@@ -80,10 +80,12 @@ sed -i "" \
     -e "s TODO_PROJECT_WEB_SITE_URL ${PROJECT_WEB_SITE_URL} g" \
     -e "s TODO_PROJECT_ONLINE_DOCUMENTATION_URL ${PROJECT_ONLINE_DOCUMENTATION_URL} g" \
     -e "s TODO_PROJECT_ONLINE_API_DOCUMENTATION_URL ${PROJECT_ONLINE_API_DOCUMENTATION_URL} g" \
+    -e "s TODO_PROJECT_PYTHON_VERSION ${PROJECT_PYTHON_VERSION} g" \
     AUTHORS \
     CHANGES.rst \
     .gitlab-ci.yml \
     .travis.yml \
+    Dockerfile \
     environment.yml \
     LICENSE \
     meta.make \
@@ -97,6 +99,8 @@ sed -i "" \
     docs/intro.rst \
     docs/make.bat \
     docs/Makefile \
+    examples/plot_getting_started.py \
+    examples/README.txt \
     TODO_PYTHON_PACKAGE_NAME/__init__.py
 
 
@@ -112,8 +116,17 @@ sed -i "" \
     -e "s/^====$/${PROJECT_NAME_UNDERLINE}/" \
     docs/index.rst
 
+sed -i "" \
+    -e "s/^====$/${PROJECT_NAME_UNDERLINE}/" \
+    examples/README.txt
+
 
 # RENAME THE ROOT PACKAGE DIRECTORY ###########################################
 
 mv -v TODO_PYTHON_PACKAGE_NAME "${PYTHON_PACKAGE_NAME}"
 
+
+# REMOVE USELESS FILES ########################################################
+
+rm notebooks/EMPTY_FILE
+rm docker-files/EMPTY_FILE

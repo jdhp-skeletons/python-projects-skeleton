@@ -1,7 +1,7 @@
 language: python
 
 python:
-    - 3.6
+    - TODO_PROJECT_PYTHON_VERSION
 
 install:
     - pip install TODO_PYTHON_PACKAGE_NAME

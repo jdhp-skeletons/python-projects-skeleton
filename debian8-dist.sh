@@ -54,7 +54,7 @@ Section: libs
 Priority: optional
 Maintainer: ${AUTHOR_NAME} <${AUTHOR_EMAIL}>
 Architecture: all
-Depends: python (>= 3.0)
+Depends: python (>= ${PROJECT_PYTHON_VERSION})
 Description: ${PROJECT_SHORT_DESC}
 EOF
 

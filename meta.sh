@@ -10,6 +10,8 @@ PROJECT_SHORT_DESC="TODO"                  # TODO one line
 PROJECT_NAME="TODO"                        # TODO e.g. PyAX-12
 PYTHON_PACKAGE_NAME="TODO"                 # TODO e.g. pyax12 (all in lower case and without special character)
 
+PROJECT_PYTHON_VERSION="3.9"
+
 PROJECT_GITHUB_ACCOUNT="jdhp"              # TODO (GitLab)
 #PROJECT_GITHUB_ACCOUNT="jeremiedecock"     # TODO (GitHub)
 PROJECT_GITHUB_REPOSITORY_NAME="TODO"      # TODO

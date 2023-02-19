@@ -117,7 +117,7 @@ To search for bugs or report them, please use the Bug Tracker at:
 Contribute
 ~~~~~~~~~~
 
-This project is written for Python 3.x.
+This project is written for Python TODO_PROJECT_PYTHON_VERSION.
 Python 2.x is *not* supported.
 
 The `TODO.md`_ file contains the TODO list.

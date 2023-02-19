@@ -1,11 +1,13 @@
-image: continuumio/miniconda3:latest
+image: python:TODO_PROJECT_PYTHON_VERSION-slim
+
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
 
 before_script:
-- apt-get update -q -y
-- apt-get install -y build-essential
+- apt update -q -y
+- apt-get install -y build-essential unzip
 - export PIP_CACHE_DIR="/opt/cache/pip"
-- conda env create -f environment.yml
-- source activate TODO_PYTHON_PACKAGE_NAME-dev
+- pip install --no-cache-dir -r requirements.txt
 - python3 setup.py develop
 
 pages:
