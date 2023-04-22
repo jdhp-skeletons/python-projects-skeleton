@@ -91,6 +91,7 @@ sed -i "" \
     meta.make \
     README.rst \
     setup.cfg \
+    setup.py \
     docs/api.rst \
     docs/conf.py \
     docs/developer.rst \
