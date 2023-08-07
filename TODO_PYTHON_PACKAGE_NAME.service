@@ -1,0 +1,16 @@
+[Unit]
+Description=TODO_PYTHON_PACKAGE_NAME
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/npm start
+WorkingDirectory=/opt/TODO_PYTHON_PACKAGE_NAME
+StandardOutput=inherit
+#StandardOutput=null
+# Or use StandardOutput=null if you don't want TODO_PROJECT_NAME messages filling syslog, for more options see systemd.exec(5)
+StandardError=inherit
+Restart=always
+User=TODO_PYTHON_PACKAGE_NAME
+
+[Install]
+WantedBy=multi-user.target

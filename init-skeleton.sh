@@ -89,9 +89,10 @@ sed -i "" \
     environment.yml \
     LICENSE \
     meta.make \
+    Dockerfile \
     README.rst \
-    setup.cfg \
-    setup.py \
+    pyproject.toml \
+    requirements-prod.txt \
     docs/api.rst \
     docs/conf.py \
     docs/developer.rst \
@@ -102,7 +103,8 @@ sed -i "" \
     docs/Makefile \
     examples/plot_getting_started.py \
     examples/README.txt \
-    TODO_PYTHON_PACKAGE_NAME/__init__.py
+    TODO_PYTHON_PACKAGE_NAME/__init__.py \
+    TODO_PYTHON_PACKAGE_NAME.service
 
 
 # FIX TITLES UNDERLINE LENGTH IN RESTRUCTUREDTEXT FILES #######################
@@ -125,6 +127,7 @@ sed -i "" \
 # RENAME THE ROOT PACKAGE DIRECTORY ###########################################
 
 mv -v TODO_PYTHON_PACKAGE_NAME "${PYTHON_PACKAGE_NAME}"
+mv -v TODO_PYTHON_PACKAGE_NAME.service "${PYTHON_PACKAGE_NAME}.service"
 
 
 # REMOVE USELESS FILES ########################################################

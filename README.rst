@@ -13,7 +13,6 @@ TODO_COPYRIGHT_NOTICE
 * Issue tracker: TODO_PROJECT_ISSUE_TRACKER_URL
 * Pytest code coverage: TODO_PROJECT_ONLINE_DOCUMENTATION_URL/htmlcov/index.html
 * TODO_PROJECT_NAME on PyPI: TODO_PROJECT_PYPI_URL
-* TODO_PROJECT_NAME on Anaconda Cloud: https://anaconda.org/jdhp/TODO_PYTHON_PACKAGE_NAME
 
 
 Description
@@ -31,10 +30,11 @@ Dependencies
 
 C.f. requirements.txt
 
+
 .. _install:
 
-Installation
-============
+Installation (development environment)
+======================================
 
 Posix (Linux, MacOSX, WSL, ...)
 -------------------------------
@@ -45,8 +45,7 @@ From the TODO_PROJECT_NAME source code::
     python3 -m venv env
     source env/bin/activate
     python3 -m pip install --upgrade pip
-    python3 -m pip install -r requirements.txt
-    python3 setup.py develop
+    python3 -m pip install -r requirements-dev.txt
 
 
 Windows
@@ -58,8 +57,15 @@ From the TODO_PROJECT_NAME source code::
     python3 -m venv env
     env\Scripts\activate.bat
     python3 -m pip install --upgrade pip
-    python3 -m pip install -r requirements.txt
-    python3 setup.py develop
+    python3 -m pip install -r requirements-dev.txt
+
+
+Installation (production environment)
+=====================================
+
+::
+
+    python3 -m pip install --no-cache-dir "TODO_PYTHON_PACKAGE_NAME @ git+ssh://git@gitlab.com/TODO_PROJECT_GITHUB_ACCOUNT/TODO_PROJECT_GITHUB_REPOSITORY_NAME.git"
 
 
 Documentation

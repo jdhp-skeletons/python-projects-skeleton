@@ -15,6 +15,8 @@ docstring for a function, use ``TODO_PYTHON_PACKAGE_NAME.get_version?<ENTER>`` (
 docstring) and ``TODO_PYTHON_PACKAGE_NAME.get_version??<ENTER>`` (to view the source code).
 """
 
+import importlib.metadata
+
 # PEP0440 compatible formatted version, see:
 # https://www.python.org/dev/peps/pep-0440/
 #
@@ -30,8 +32,8 @@ docstring) and ``TODO_PYTHON_PACKAGE_NAME.get_version??<ENTER>`` (to view the so
 #
 # Dev branch marker is: 'X.Y.dev' or 'X.Y.devN' where N is an integer.
 # 'X.Y.dev0' is the canonical version of 'X.Y.dev'
-#
-__version__ = '0.1.dev0'
+
+__version__ = importlib.metadata.version("TODO_PYTHON_PACKAGE_NAME")
 
 def get_version():
     return __version__
